@@ -17,7 +17,9 @@ const ticketPrice = document.getElementById('ticket-price');
 const genera = document.getElementById('send');
 const annulla = document.getElementById('cancel')
 
-genera.addEventListener('click', function(){
+genera.addEventListener('click', function(event){
+    event.preventDefault();
+
     let name = nameField.value.trim();
     namePassenger.innerText = name;
     
@@ -28,29 +30,20 @@ genera.addEventListener('click', function(){
     cpCode.innerText = cpRandom;
 
     let price = kmField.value * 0.21;
-    ticketPrice.innerText = (`${price} €`);
+    let age = ageField.value
+
+    if(age <= 17){
+        price = price - (price * 0.20);
+        ticketType.innerText = "Biglietto Scontato";
+    }
+    else if(age >= 65){
+        price = price - (price * 0.40);
+        ticketType.innerText = "Biglietto Scontato";
+    }
+    else{
+        ticketType.innerText = "Biglietto Standard";
+    }
+    
+    ticketPrice.innerText = (`${price.toFixed(2)} €`);
+    
 })
-
-
-// dichiaro la variabile per il prezzo del biglietto
-let biglietto = 0.21 * kmField;
-
-console.log(kmField, ageField, biglietto);
-
-// dichiaro la variabile per il prezzo finale
-let finalprice;
-
-// creo un if per calcolare gli sconti
-if (ageField <= 17){
-    finalprice = biglietto - biglieto * 0.2;
-}
-
-else if(ageField >=65){
-    finalprice = biglietto - biglietto * 0.4;
-}
-
-else{
-    finalprice = biglietto;
-}
-
-console.log(`Il prezzo finale da pagare è di ${finalprice.toFixed(2)}`);
