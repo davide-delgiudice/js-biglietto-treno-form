@@ -5,6 +5,11 @@ const nameField = document.getElementById('name-field');
 const kmField = document.getElementById('km-field');
 const ageField = document.getElementById('age-field');
 
+const ticketType = document.getElementById('ticket-type');
+const cabNum = document.getElementById('cab-num');
+const cpCode = document.getElementById('cp-code');
+const ticketPrice = document.getElementById('ticket-price');
+
 // dichiaro la variabile per il prezzo del biglietto
 let biglietto = 0.21 * kmField;
 
