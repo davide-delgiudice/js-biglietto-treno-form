@@ -19,9 +19,12 @@ const annulla = document.getElementById('cancel')
 
 genera.addEventListener('click', function(){
     let name = nameField.value.trim();
-    console.log(name);
+    namePassenger.innerText = name;
+    
+    let cabRandom = Math.floor(Math.random() * 8) + 1;
+    cabNum = cabRandom;
 
-    namePassenger.innerText= name;
+    
 })
 
 
