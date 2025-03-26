@@ -22,12 +22,13 @@ genera.addEventListener('click', function(){
     namePassenger.innerText = name;
     
     let cabRandom = Math.floor(Math.random() * 8) + 1;
-    cabNum = cabRandom;
+    cabNum.innerText = cabRandom;
 
-    let cpRandom = Math.floor(Math.random() * 99999) + 10000;
-    cpCode = cpRandom;
+    let cpRandom = Math.floor(Math.random() * 9999) + 1000;
+    cpCode.innerText = cpRandom;
 
-
+    let price = kmField.value * 0.21;
+    ticketPrice.innerText = (`${price} €`);
 })
 
 
