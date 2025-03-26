@@ -24,7 +24,10 @@ genera.addEventListener('click', function(){
     let cabRandom = Math.floor(Math.random() * 8) + 1;
     cabNum = cabRandom;
 
-    
+    let cpRandom = Math.floor(Math.random() * 99999) + 10000;
+    cpCode = cpRandom;
+
+
 })
 
 
