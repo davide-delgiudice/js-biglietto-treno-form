@@ -44,6 +44,13 @@ genera.addEventListener('click', function(event){
         ticketType.innerText = "Biglietto Standard";
     }
     
-    ticketPrice.innerText = (`${price.toFixed(2)} €`);
-    
+    ticketPrice.innerText = (`${price.toFixed(2)} €`);    
+})
+
+annulla.addEventListener('click', function(event){
+    event.preventDefault();
+
+    nameField.value = "";
+    kmField.value = "";
+    ageField.value = "";
 })
