@@ -13,3 +13,17 @@ console.log(kmField, ageField, biglietto);
 // dichiaro la variabile per il prezzo finale
 let finalprice;
 
+// creo un if per calcolare gli sconti
+if (ageField <= 17){
+    finalprice = biglietto - biglieto * 0.2;
+}
+
+else if(ageField >=65){
+    finalprice = biglietto - biglietto * 0.4;
+}
+
+else{
+    finalprice = biglietto;
+}
+
+console.log(`Il prezzo finale da pagare è di ${finalprice.toFixed(2)}`);
